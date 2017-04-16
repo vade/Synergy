@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "E25A9A0BFCA2B681AE1B3D25FF43AAA91EFC2C5E",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "E25A9A0BFCA2B681AE1B3D25FF43AAA91EFC2C5E" : 9223372036854775807,
+    "1C75F1C5CFCB95B3702F6F632FA05ED5244B519E" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "95A75A9E-2FAD-4B59-9B49-3283F2A64C9E",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "E25A9A0BFCA2B681AE1B3D25FF43AAA91EFC2C5E" : "Synergy\/",
+    "1C75F1C5CFCB95B3702F6F632FA05ED5244B519E" : "Synergy\/CocoaAsyncSocket\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Synergy",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Synergy\/Synergy.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/robbiehanson\/CocoaAsyncSocket",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "1C75F1C5CFCB95B3702F6F632FA05ED5244B519E"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/vade\/Synergy.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "E25A9A0BFCA2B681AE1B3D25FF43AAA91EFC2C5E"
+    }
+  ]
+}

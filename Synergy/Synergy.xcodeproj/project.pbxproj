@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		1B0CFF6D1EA43175008FE9C8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B0CFF6C1EA43175008FE9C8 /* main.m */; };
 		1B0CFF701EA43175008FE9C8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B0CFF6F1EA43175008FE9C8 /* AppDelegate.m */; };
-		1B0CFF731EA43175008FE9C8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B0CFF721EA43175008FE9C8 /* ViewController.m */; };
+		1B0CFF731EA43175008FE9C8 /* InitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B0CFF721EA43175008FE9C8 /* InitialViewController.m */; };
 		1B0CFF761EA43175008FE9C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B0CFF741EA43175008FE9C8 /* Main.storyboard */; };
 		1B0CFF781EA43175008FE9C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B0CFF771EA43175008FE9C8 /* Assets.xcassets */; };
 		1B0CFF7B1EA43175008FE9C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B0CFF791EA43175008FE9C8 /* LaunchScreen.storyboard */; };
@@ -20,13 +20,51 @@
 		1B0CFF951EA432BA008FE9C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B0CFF931EA432BA008FE9C8 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		1B0CFFA01EA433EC008FE9C8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1B0CFF9A1EA433EB008FE9C8 /* CocoaAsyncSocket.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6CD990101B77868C0011A685;
+			remoteInfo = "iOS CocoaAsyncSocket";
+		};
+		1B0CFFA21EA433EC008FE9C8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1B0CFF9A1EA433EB008FE9C8 /* CocoaAsyncSocket.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9FC41F131B9D965000578BEB;
+			remoteInfo = "Mac CocoaAsyncSocket";
+		};
+		1B0CFFA41EA433EC008FE9C8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1B0CFF9A1EA433EB008FE9C8 /* CocoaAsyncSocket.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7D8B70C41BCFA15700D8E273;
+			remoteInfo = "tvOS CocoaAsyncSocket";
+		};
+		1B0CFFA61EA43405008FE9C8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1B0CFF9A1EA433EB008FE9C8 /* CocoaAsyncSocket.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 6CD9900F1B77868C0011A685;
+			remoteInfo = "iOS CocoaAsyncSocket";
+		};
+		1B0CFFA81EA4340A008FE9C8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1B0CFF9A1EA433EB008FE9C8 /* CocoaAsyncSocket.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 9FC41F121B9D965000578BEB;
+			remoteInfo = "Mac CocoaAsyncSocket";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		1B0CFF681EA43175008FE9C8 /* Synergy-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Synergy-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B0CFF6C1EA43175008FE9C8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1B0CFF6E1EA43175008FE9C8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1B0CFF6F1EA43175008FE9C8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		1B0CFF711EA43175008FE9C8 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		1B0CFF721EA43175008FE9C8 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		1B0CFF711EA43175008FE9C8 /* InitialViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InitialViewController.h; sourceTree = "<group>"; };
+		1B0CFF721EA43175008FE9C8 /* InitialViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InitialViewController.m; sourceTree = "<group>"; };
 		1B0CFF751EA43175008FE9C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1B0CFF771EA43175008FE9C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1B0CFF7A1EA43175008FE9C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -40,6 +78,8 @@
 		1B0CFF911EA432BA008FE9C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1B0CFF941EA432BA008FE9C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1B0CFF961EA432BA008FE9C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1B0CFF9A1EA433EB008FE9C8 /* CocoaAsyncSocket.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CocoaAsyncSocket.xcodeproj; path = ../CocoaAsyncSocket/CocoaAsyncSocket.xcodeproj; sourceTree = "<group>"; };
+		1B0CFFAA1EA43741008FE9C8 /* Shared.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Shared.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +103,8 @@
 		1B0CFF5F1EA43175008FE9C8 = {
 			isa = PBXGroup;
 			children = (
+				1B0CFF9A1EA433EB008FE9C8 /* CocoaAsyncSocket.xcodeproj */,
+				1B0CFFAB1EA4379F008FE9C8 /* Shared */,
 				1B0CFF6A1EA43175008FE9C8 /* Synergy-iOS */,
 				1B0CFF871EA432BA008FE9C8 /* Synergy-macOS */,
 				1B0CFF691EA43175008FE9C8 /* Products */,
@@ -83,8 +125,8 @@
 			children = (
 				1B0CFF6E1EA43175008FE9C8 /* AppDelegate.h */,
 				1B0CFF6F1EA43175008FE9C8 /* AppDelegate.m */,
-				1B0CFF711EA43175008FE9C8 /* ViewController.h */,
-				1B0CFF721EA43175008FE9C8 /* ViewController.m */,
+				1B0CFF711EA43175008FE9C8 /* InitialViewController.h */,
+				1B0CFF721EA43175008FE9C8 /* InitialViewController.m */,
 				1B0CFF741EA43175008FE9C8 /* Main.storyboard */,
 				1B0CFF771EA43175008FE9C8 /* Assets.xcassets */,
 				1B0CFF791EA43175008FE9C8 /* LaunchScreen.storyboard */,
@@ -126,6 +168,24 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		1B0CFF9B1EA433EB008FE9C8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1B0CFFA11EA433EC008FE9C8 /* CocoaAsyncSocket.framework */,
+				1B0CFFA31EA433EC008FE9C8 /* CocoaAsyncSocket.framework */,
+				1B0CFFA51EA433EC008FE9C8 /* CocoaAsyncSocket.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1B0CFFAB1EA4379F008FE9C8 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				1B0CFFAA1EA43741008FE9C8 /* Shared.h */,
+			);
+			name = Shared;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -140,6 +200,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				1B0CFFA71EA43405008FE9C8 /* PBXTargetDependency */,
 			);
 			name = "Synergy-iOS";
 			productName = Synergy;
@@ -157,6 +218,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				1B0CFFA91EA4340A008FE9C8 /* PBXTargetDependency */,
 			);
 			name = "Synergy-macOS";
 			productName = "Synergy-macOS";
@@ -195,6 +257,12 @@
 			mainGroup = 1B0CFF5F1EA43175008FE9C8;
 			productRefGroup = 1B0CFF691EA43175008FE9C8 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 1B0CFF9B1EA433EB008FE9C8 /* Products */;
+					ProjectRef = 1B0CFF9A1EA433EB008FE9C8 /* CocoaAsyncSocket.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				1B0CFF671EA43175008FE9C8 /* Synergy-iOS */,
@@ -202,6 +270,30 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		1B0CFFA11EA433EC008FE9C8 /* CocoaAsyncSocket.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = CocoaAsyncSocket.framework;
+			remoteRef = 1B0CFFA01EA433EC008FE9C8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1B0CFFA31EA433EC008FE9C8 /* CocoaAsyncSocket.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = CocoaAsyncSocket.framework;
+			remoteRef = 1B0CFFA21EA433EC008FE9C8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1B0CFFA51EA433EC008FE9C8 /* CocoaAsyncSocket.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = CocoaAsyncSocket.framework;
+			remoteRef = 1B0CFFA41EA433EC008FE9C8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		1B0CFF661EA43175008FE9C8 /* Resources */ = {
@@ -230,7 +322,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1B0CFF731EA43175008FE9C8 /* ViewController.m in Sources */,
+				1B0CFF731EA43175008FE9C8 /* InitialViewController.m in Sources */,
 				1B0CFF701EA43175008FE9C8 /* AppDelegate.m in Sources */,
 				1B0CFF6D1EA43175008FE9C8 /* main.m in Sources */,
 			);
@@ -247,6 +339,19 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1B0CFFA71EA43405008FE9C8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "iOS CocoaAsyncSocket";
+			targetProxy = 1B0CFFA61EA43405008FE9C8 /* PBXContainerItemProxy */;
+		};
+		1B0CFFA91EA4340A008FE9C8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Mac CocoaAsyncSocket";
+			targetProxy = 1B0CFFA81EA4340A008FE9C8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		1B0CFF741EA43175008FE9C8 /* Main.storyboard */ = {
