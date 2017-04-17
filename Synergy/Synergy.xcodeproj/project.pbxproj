@@ -18,6 +18,8 @@
 		1B0CFF901EA432BA008FE9C8 /* NetworkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B0CFF8F1EA432BA008FE9C8 /* NetworkViewController.m */; };
 		1B0CFF921EA432BA008FE9C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B0CFF911EA432BA008FE9C8 /* Assets.xcassets */; };
 		1B0CFF951EA432BA008FE9C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B0CFF931EA432BA008FE9C8 /* Main.storyboard */; };
+		1B0CFFAF1EA43F5D008FE9C8 /* NetworkServiceCollectionViewItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B0CFFAD1EA43F5D008FE9C8 /* NetworkServiceCollectionViewItem.m */; };
+		1B0CFFB01EA43F5D008FE9C8 /* NetworkServiceCollectionViewItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B0CFFAE1EA43F5D008FE9C8 /* NetworkServiceCollectionViewItem.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +82,9 @@
 		1B0CFF961EA432BA008FE9C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1B0CFF9A1EA433EB008FE9C8 /* CocoaAsyncSocket.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CocoaAsyncSocket.xcodeproj; path = ../CocoaAsyncSocket/CocoaAsyncSocket.xcodeproj; sourceTree = "<group>"; };
 		1B0CFFAA1EA43741008FE9C8 /* Shared.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Shared.h; sourceTree = "<group>"; };
+		1B0CFFAC1EA43F5D008FE9C8 /* NetworkServiceCollectionViewItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkServiceCollectionViewItem.h; sourceTree = "<group>"; };
+		1B0CFFAD1EA43F5D008FE9C8 /* NetworkServiceCollectionViewItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkServiceCollectionViewItem.m; sourceTree = "<group>"; };
+		1B0CFFAE1EA43F5D008FE9C8 /* NetworkServiceCollectionViewItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NetworkServiceCollectionViewItem.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +157,9 @@
 				1B0CFF891EA432BA008FE9C8 /* AppDelegate.m */,
 				1B0CFF8E1EA432BA008FE9C8 /* NetworkViewController.h */,
 				1B0CFF8F1EA432BA008FE9C8 /* NetworkViewController.m */,
+				1B0CFFAC1EA43F5D008FE9C8 /* NetworkServiceCollectionViewItem.h */,
+				1B0CFFAD1EA43F5D008FE9C8 /* NetworkServiceCollectionViewItem.m */,
+				1B0CFFAE1EA43F5D008FE9C8 /* NetworkServiceCollectionViewItem.xib */,
 				1B0CFF911EA432BA008FE9C8 /* Assets.xcassets */,
 				1B0CFF931EA432BA008FE9C8 /* Main.storyboard */,
 				1B0CFF961EA432BA008FE9C8 /* Info.plist */,
@@ -311,6 +319,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1B0CFF921EA432BA008FE9C8 /* Assets.xcassets in Resources */,
+				1B0CFFB01EA43F5D008FE9C8 /* NetworkServiceCollectionViewItem.xib in Resources */,
 				1B0CFF951EA432BA008FE9C8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -334,6 +343,7 @@
 			files = (
 				1B0CFF901EA432BA008FE9C8 /* NetworkViewController.m in Sources */,
 				1B0CFF8D1EA432BA008FE9C8 /* main.m in Sources */,
+				1B0CFFAF1EA43F5D008FE9C8 /* NetworkServiceCollectionViewItem.m in Sources */,
 				1B0CFF8A1EA432BA008FE9C8 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
