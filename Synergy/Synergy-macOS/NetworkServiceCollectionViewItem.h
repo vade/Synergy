@@ -13,4 +13,6 @@
 @property (readwrite, strong) IBOutlet NSTextField* address;
 @property (readwrite, strong) IBOutlet NSTextField* port;
 
+- (void) setStatus:(NSUInteger)status;
+
 @end

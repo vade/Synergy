@@ -20,6 +20,8 @@
 		1B0CFF951EA432BA008FE9C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B0CFF931EA432BA008FE9C8 /* Main.storyboard */; };
 		1B0CFFAF1EA43F5D008FE9C8 /* NetworkServiceCollectionViewItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B0CFFAD1EA43F5D008FE9C8 /* NetworkServiceCollectionViewItem.m */; };
 		1B0CFFB01EA43F5D008FE9C8 /* NetworkServiceCollectionViewItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B0CFFAE1EA43F5D008FE9C8 /* NetworkServiceCollectionViewItem.xib */; };
+		1B0CFFB11EA54291008FE9C8 /* CocoaAsyncSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B0CFFA11EA433EC008FE9C8 /* CocoaAsyncSocket.framework */; };
+		1B0CFFB31EA54330008FE9C8 /* CocoaAsyncSocket.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1B0CFFA11EA433EC008FE9C8 /* CocoaAsyncSocket.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +62,19 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		1B0CFFB21EA54313008FE9C8 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				1B0CFFB31EA54330008FE9C8 /* CocoaAsyncSocket.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		1B0CFF681EA43175008FE9C8 /* Synergy-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Synergy-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B0CFF6C1EA43175008FE9C8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -92,6 +107,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B0CFFB11EA54291008FE9C8 /* CocoaAsyncSocket.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,6 +220,7 @@
 				1B0CFF641EA43175008FE9C8 /* Sources */,
 				1B0CFF651EA43175008FE9C8 /* Frameworks */,
 				1B0CFF661EA43175008FE9C8 /* Resources */,
+				1B0CFFB21EA54313008FE9C8 /* CopyFiles */,
 			);
 			buildRules = (
 			);

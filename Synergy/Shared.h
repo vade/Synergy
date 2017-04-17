@@ -11,7 +11,7 @@
 #import <CoreFoundation/CoreFoundation.h>
 
 static NSString* kSynergyNetServiceType = @"_synergy_vade_info._tcp.";
-static NSString* kSynergyNetServiceName = @"_synergy_";
+//static NSString* kSynergyNetServiceName = @"_synergy_";
 
 static NSString* kSynergyNetServiceVersionMajor = @"VersionMajor";
 static NSString* kSynergyNetServiceVersionMinor = @"VersionMinor";
@@ -22,11 +22,11 @@ static NSString* kSynergyDeviceSystemVersion = @"SystemVersion";
 static NSString* kSynergyDeviceVendorUUID = @"VendorUUID";
 
 
-NSUInteger kSynergyProtocolTagConnectSyn = 0;
-NSUInteger kSynergyProtocolTagConnectAck = 1;
+const NSUInteger kSynergyProtocolTagConnectSyn = 0;
+const NSUInteger kSynergyProtocolTagConnectAck = 1;
 
-NSUInteger kSynergyProtocolTagSyncronizeSyn = 10;
-NSUInteger kSynergyProtocolTagSyncronizeAck = 11;
+const NSUInteger kSynergyProtocolTagSyncronizeSyn = 10;
+const NSUInteger kSynergyProtocolTagSyncronizeAck = 11;
 
 
 #endif /* Shared_h */

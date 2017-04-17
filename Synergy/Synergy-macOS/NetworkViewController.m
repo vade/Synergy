@@ -56,7 +56,7 @@
 - (void)viewWillLayout
 {
     NSLog(@"layout");
-    ((NSCollectionViewFlowLayout*)(self.collectionView.collectionViewLayout)).itemSize = NSMakeSize(self.collectionView.bounds.size.width, 100);
+    ((NSCollectionViewFlowLayout*)(self.collectionView.collectionViewLayout)).itemSize = NSMakeSize(self.collectionView.bounds.size.width, 56);
 }
 
 #pragma mark - NetServiceBrowser Delegate
@@ -135,7 +135,8 @@
     
     NSDictionary* txtDict = [NSNetService dictionaryFromTXTRecordData:[service TXTRecordData]];
     
-//    NSNumber* version = txtDict[kSynergyNetServiceVersion];
+    NSString* versionMajor = [[NSString alloc] initWithData:txtDict[kSynergyNetServiceVersionMajor] encoding:NSUTF8StringEncoding];
+    NSString* versionMinor = [[NSString alloc] initWithData:txtDict[kSynergyNetServiceVersionMinor] encoding:NSUTF8StringEncoding];
     NSString* deviceName = [[NSString alloc] initWithData:txtDict[kSynergyDeviceName] encoding:NSUTF8StringEncoding];
     NSString* deviceModel = [[NSString alloc] initWithData:txtDict[kSynergyDeviceModel] encoding:NSUTF8StringEncoding];
     NSString* deviceOS = [[NSString alloc] initWithData:txtDict[kSynergyDeviceSystemVersion] encoding:NSUTF8StringEncoding];
@@ -148,17 +149,88 @@
     return item;
 }
 
-#pragma mark - NSCollectionView Delegate
+#pragma mark - NSCollectionView Delegate Methods
 
+
+#pragma mark - GCDASyncSocket Delegate Methods
+
+- (void)socket:(GCDAsyncSocket *)sock didConnectToHost:(NSString *)host port:(uint16_t)port
+{
+    NSLog(@"Connect");
+    NSString* connectSYN = @"kSynergyProtocolTagConnectSyn";
+    NSData* connectSYNData = [connectSYN dataUsingEncoding:NSUTF8StringEncoding];
+    [sock writeData:connectSYNData withTimeout:2 tag:kSynergyProtocolTagConnectSyn];
+}
+
+- (void)socket:(GCDAsyncSocket *)sock didWriteDataWithTag:(long)tag
+{
+    switch (tag) {
+        case kSynergyProtocolTagConnectSyn:
+            [sock readDataWithTimeout:2 tag:kSynergyProtocolTagConnectAck];
+
+            break;
+            
+        default:
+            break;
+    }
+
+}
+
+
+- (void)socket:(GCDAsyncSocket *)sock didReadData:(nonnull NSData *)data withTag:(long)tag
+{
+    NSLog(@"readData");
+    switch(tag)
+    {
+        case kSynergyProtocolTagConnectAck:
+        {
+            NSString* string = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+            if([string isEqualToString:@"kSynergyProtocolTagConnectAck"])
+            {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    NetworkServiceCollectionViewItem* item = [self itemForSocket:sock];
+                    [item setStatus:2];
+                });
+            }
+        }
+    }
+}
 
 #pragma mark - Actions
 
+- (NSIndexPath*) indexPathForSocket:(GCDAsyncSocket*)sock
+{
+    NSUInteger index = [self.sockets indexOfObject:sock];
+    
+    return [NSIndexPath indexPathForItem:index inSection:0];
+}
+
+-(NetworkServiceCollectionViewItem*) itemForSocket:(GCDAsyncSocket*)sock
+{
+    NSIndexPath* indexPath = [self indexPathForSocket:sock];
+    
+    return (NetworkServiceCollectionViewItem*)[self.collectionView itemAtIndexPath:indexPath];
+}
+
+
 - (IBAction)synchronize:(id)sender
 {
+    
+    for(GCDAsyncSocket* sock in self.sockets)
+    {
+        [sock disconnect];
+    }
+
+    [self.sockets removeAllObjects];
+    
+    
     for(NSNetService* service in self.discoveredServices)
     {
         dispatch_queue_t socketQueue = dispatch_queue_create("socketqueue", DISPATCH_QUEUE_SERIAL);
         GCDAsyncSocket* socket = [[GCDAsyncSocket alloc] initWithDelegate:self delegateQueue:self.delegateQueue socketQueue:socketQueue];
+        
+        // Associate our socket with our NSNetService
+        socket.userData = service;
         
         NSError* error = nil;
         [socket connectToHost:service.hostName onPort:service.port error:&error];

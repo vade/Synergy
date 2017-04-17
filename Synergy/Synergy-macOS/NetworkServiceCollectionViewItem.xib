@@ -14,11 +14,11 @@
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customView id="Hz6-mo-xeY">
-            <rect key="frame" x="0.0" y="0.0" width="458" height="37"/>
+            <rect key="frame" x="0.0" y="0.0" width="458" height="56"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nPa-jz-tn1">
-                    <rect key="frame" x="-2" y="10" width="137" height="17"/>
+                    <rect key="frame" x="44" y="22" width="396" height="14"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="New Service" id="cKP-Bd-lEF">
                         <font key="font" metaFont="system"/>
@@ -26,34 +26,23 @@
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SOW-m9-rEC">
-                    <rect key="frame" x="410" y="10" width="30" height="17"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Port" id="YrZ-Dn-9yv">
-                        <font key="font" metaFont="system"/>
-                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                    </textFieldCell>
-                </textField>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Bp-dJ-dj3">
-                    <rect key="frame" x="189" y="10" width="116" height="17"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="New Service" id="DZQ-FA-k08">
-                        <font key="font" metaFont="system"/>
-                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                    </textFieldCell>
-                </textField>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Azs-qk-9ls">
+                    <rect key="frame" x="20" y="20" width="18" height="18"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="NSStatusUnavailable" id="tDW-9o-Pqf"/>
+                </imageView>
             </subviews>
-            <point key="canvasLocation" x="120" y="51.5"/>
+            <point key="canvasLocation" x="120" y="42"/>
         </customView>
         <collectionViewItem identifier="NetworkServiceCollectionViewItem" id="zlU-eS-gAr" customClass="NetworkServiceCollectionViewItem">
             <connections>
-                <outlet property="address" destination="9Bp-dJ-dj3" id="sTG-dQ-Pde"/>
                 <outlet property="hostName" destination="nPa-jz-tn1" id="bez-8k-l5G"/>
-                <outlet property="port" destination="SOW-m9-rEC" id="RaW-CS-ms7"/>
+                <outlet property="statusImageView" destination="Azs-qk-9ls" id="bZN-5d-HfS"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="Tzq-qi-5Ut"/>
             </connections>
         </collectionViewItem>
     </objects>
+    <resources>
+        <image name="NSStatusUnavailable" width="16" height="16"/>
+    </resources>
 </document>

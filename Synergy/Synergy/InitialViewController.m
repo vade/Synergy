@@ -35,25 +35,19 @@
     NSError *err = nil;
     if ([self.asyncSocket acceptOnPort:0 error:&err])
     {
-        
-
         UInt16 port = [self.asyncSocket localPort];
 
         self.netService = [[NSNetService alloc] initWithDomain:@"local."
                                                           type:kSynergyNetServiceType
-                                                          name:kSynergyNetServiceName
+                                                          name:[UIDevice currentDevice].name
                                                           port:port];
         [self.netService setDelegate:self];
         [self.netService publish];
 
         NSMutableDictionary *txtDict = [NSMutableDictionary dictionaryWithCapacity:4];
-//        [txtDict setObject:@"moo" forKey:@"cow"];
-//        [txtDict setObject:@"quack" forKey:@"duck"];
-//        [txtDict setObject:kSynergyNetServiceVersion forKey:@(1)];
 
         [txtDict setObject:@"0" forKey:kSynergyNetServiceVersionMajor];
         [txtDict setObject:@"0" forKey:kSynergyNetServiceVersionMinor];
-
         [txtDict setObject:[UIDevice currentDevice].name forKey:kSynergyDeviceName];
         [txtDict setObject:[self hardwareDescription] forKey:kSynergyDeviceModel];
         [txtDict setObject:[UIDevice currentDevice].systemVersion forKey:kSynergyDeviceSystemVersion];
@@ -79,8 +73,11 @@
     NSLog(@"Accepted new socket from %@:%hu", [newSocket connectedHost], [newSocket connectedPort]);
     
     // The newSocket automatically inherits its delegate & delegateQueue from its parent.
-    
+
+    [newSocket readDataWithTimeout:2 tag:kSynergyProtocolTagConnectSyn];
+
     [self.connectedSockets addObject:newSocket];
+    
     
     self.view.layer.backgroundColor = [UIColor greenColor].CGColor;
 }
@@ -90,7 +87,27 @@
     NSLog(@"Disconnected new socket from %@:%hu", [sock connectedHost], [sock connectedPort]);
 
     [self.connectedSockets removeObject:sock];
+    
+    self.view.layer.backgroundColor = [UIColor yellowColor].CGColor;
+
 }
+
+- (void)socket:(GCDAsyncSocket *)sock didReadData:(NSData *)data withTag:(long)tag
+{
+    switch(tag)
+    {
+        case kSynergyProtocolTagConnectSyn:
+        {
+            // send an ack back
+            NSLog(@"Connect");
+            NSString* connectACK = @"kSynergyProtocolTagConnectAck";
+            NSData* connectACKData = [connectACK dataUsingEncoding:NSUTF8StringEncoding];
+
+            [sock writeData:connectACKData withTimeout:2 tag:kSynergyProtocolTagConnectAck];
+        }
+    }
+}
+
 
 #pragma mark - NSNetservice Delegate Methods
 
